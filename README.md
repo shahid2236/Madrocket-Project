@@ -1,8 +1,24 @@
-# React + Vite
+# Students Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based web application for managing student data, featuring Firebase Authentication and Firestore integration.
 
-Currently, two official plugins are available:
+## Features
+- **Login Page:** Secure login with Firebase Authentication.
+- **Students Page:** 
+  - Displays a list of students in a table format.
+  - Add new students via a modal form with validation.
+  - Edit and update student information.
+  - Delete student records.
+- **Sidebar:** Navigate between the Students Page and Logout functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Firebase Authentication, Firestore Database
+- **Build Tool:** Vite
+
+## Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
