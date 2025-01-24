@@ -1,9 +1,9 @@
-// Import the necessary Firebase SDKs
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// Your Firebase configuration (replace with your actual credentials from Firebase console)
+
 const firebaseConfig = {
     apiKey: "AIzaSyAIsSazCOOM8QtK7f8OLgjw423hbHiJnhc",
     authDomain: "madrocket-f3db4.firebaseapp.com",
@@ -14,9 +14,7 @@ const firebaseConfig = {
     measurementId: "G-C1QXN063VM"
   };
 
-// Initialize Firebase App
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase Auth and Firestore
-export const auth = getAuth(app); // This exports 'auth'
-export const db = getFirestore(app); // This exports 'db'
+export const auth = getAuth(app); 
+export const db = getFirestore(app); 

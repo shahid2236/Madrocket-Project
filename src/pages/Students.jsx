@@ -5,7 +5,7 @@ import { collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from "firebase
 
 const Students = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [editModalOpen, setEditModalOpen] = useState(false); // For Edit Modal
+  const [editModalOpen, setEditModalOpen] = useState(false); 
   const [student, setStudent] = useState({
     id: "",
     name: "",
@@ -14,9 +14,9 @@ const Students = () => {
     rollNumber: "",
   });
   const [studentsList, setStudentsList] = useState([]);
-  const [selectedStudent, setSelectedStudent] = useState(null); // To store selected student for editing
+  const [selectedStudent, setSelectedStudent] = useState(null);
 
-  // Fetch students from Firestore
+
   const fetchStudents = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "students"));
@@ -68,7 +68,7 @@ const Students = () => {
     try {
       await deleteDoc(doc(db, "students", id));
       alert("Student deleted successfully!");
-      fetchStudents(); // Fetch updated students list
+      fetchStudents(); 
     } catch (error) {
       console.error("Error deleting student:", error);
       alert("There was an error deleting the student.");
@@ -77,7 +77,7 @@ const Students = () => {
 
   const handleEdit = (studentData) => {
     setSelectedStudent(studentData);
-    setEditModalOpen(true); // Open the edit modal with the selected student
+    setEditModalOpen(true);
   };
 
   const handleUpdate = async () => {
@@ -102,7 +102,7 @@ const Students = () => {
       });
       alert("Student updated successfully!");
       setEditModalOpen(false);
-      fetchStudents(); // Fetch updated students list
+      fetchStudents();
     } catch (error) {
       console.error("Error updating student:", error);
       alert("There was an error updating the student.");
@@ -155,7 +155,7 @@ const Students = () => {
           </tbody>
         </table>
 
-        {/* Modal for adding student */}
+        
         {modalOpen && (
           <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
             <div className="bg-white p-4 rounded shadow-lg">
@@ -214,7 +214,7 @@ const Students = () => {
           </div>
         )}
 
-        {/* Modal for editing student */}
+       
         {editModalOpen && selectedStudent && (
           <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
             <div className="bg-white p-4 rounded shadow-lg">
