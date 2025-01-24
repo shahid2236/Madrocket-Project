@@ -4,6 +4,8 @@ A simple React-based web application for managing student data, featuring Fireba
 
 ## Features
 - **Login Page:** Secure login with Firebase Authentication.
+- Email: admin@123.com
+- Password: admin@123
 - **Students Page:** 
   - Displays a list of students in a table format.
   - Add new students via a modal form with validation.
